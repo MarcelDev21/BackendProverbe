@@ -12,7 +12,7 @@ app.use(express.json({limit: '100mb'}))
 app.use(express.urlencoded({limit: '100mb', extended: true}))
 
 app.use('/api', ProverbeRoute)
-app.use('/', (req,res)=> {
+app.use('/api', (req,res)=> {
     res.status(200).send("connected successfuly")
 })
 //app.get('/', (req, res) => res.send('Hello World!'))
