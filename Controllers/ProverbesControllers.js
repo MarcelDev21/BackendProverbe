@@ -13,6 +13,7 @@ module.exports = {
     PostProverbe : async(req,res) => {
      const MesProverbesss = await new ProverbesChema(req.body)
     try {
+        console.log("proverd")
         await MesProverbesss.save()
         res.status(202).json("Proverbes create Successsfuly")
     } catch (error) {
